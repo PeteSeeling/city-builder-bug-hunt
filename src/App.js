@@ -16,22 +16,21 @@ function App() {
   const [slogans, setSlogans] = useState(['The City of Excellence']);
 
   return (
-    <h3>My App</h3>
-    <div className="App">
+    <><h3>My App</h3><div className="App">
       <City skylineId={skylineId} castleId={castleId} />
       <h1>Welcome to beautiful {cityName}</h1>
       <div className='bottom'>
-        <CityNameInput setCityName={props.setCityName} />
+        <CityNameInput setCityName={setCityName} />
         <section className='dropdowns'>
-          <WaterfrontDropdown />
-          <SkylineDropdown setSkyline={setSkyline}/>
+          <WaterfrontDropdown setWaterfront={setWaterfront}/>
+          <SkylineDropdown setSkyline={setSkyline} />
           <CastleDropdown setCastle={setCastle} />
         </section>
         <SloganForm setSlogans={setSlogans} slogans={slogans} />
-        <SloganList/>
+        <SloganList />
       </div>
-    </div>
+    </div></>
   );
 }
 
-export App;
+export default App;

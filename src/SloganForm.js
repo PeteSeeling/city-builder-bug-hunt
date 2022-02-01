@@ -1,5 +1,7 @@
+import { useState } from 'react';
+
 export default function SloganForm(props) {
-  const [sloganInput, setSloganInput] = useState([]);
+  const [sloganInput, setSloganInput] = useState();
     
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,7 +15,7 @@ export default function SloganForm(props) {
     <section>
       <form onSubmit={handleSubmit}>
         Add a slogan to the list!
-        <input value={sloganInput} onChange={e => setSloganInput(value)}/>
+        <input value={sloganInput} onChange={e => setSloganInput()}/>
         <button>Submit</button>
       </form>
     </section>

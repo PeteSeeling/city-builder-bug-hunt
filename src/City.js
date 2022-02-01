@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function City(props) {
+export default function City({ waterfrontId, skylineId, castleId }) {
   return (
     <div className="city">
       <img src={`/waterfront-${waterfrontId}.jpeg`}/>
